@@ -23,4 +23,17 @@ class UsersController < ApplicationController
     response_text = "Hey your new user is created with the id #{new_user.id}"
     render plain: response_text
   end
+
+  def login
+    render plain: User.where("email = ? and password = ?", params[:email], params[:password]).exists?
+  end
+
+  def update
+    id = params[:id]
+    email = params[:email]
+    user = User.find(id)
+    user.email = email
+    user.save!
+    render plain: "Updated User email status to #{email}"
+  end
 end
