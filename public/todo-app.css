@@ -6,9 +6,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.TodoPage-main {
-  font-size: medium;
-}
 .TodoPage-title {
   font-size: 48px;
   line-height: 1.6;
@@ -79,18 +76,12 @@ body {
   color: black;
 }
 .TodoItem {
-  display: inline;
   font-size: 14px;
   margin-left: 8px;
   margin-bottom: 6px;
   color: #453c52;
 }
-.TodoItem-dueDate {
-  display: inline;
-  font-size: 12px;
-  color: blue;
-  margin-left: 10px;
-}
+
 .TodoItem-container {
   font-size: 20px;
   padding: 6px 12px;
@@ -99,16 +90,17 @@ body {
 .TodoItem-container:hover {
   background-color: #f1edf7;
 }
+
+.TodoItem-checkbox {
+  width: 24px;
+  height: 11px;
+  margin-top: 15px;
+}
 .TodoItem-overdueLabel {
   margin-left: 10px;
   color: #c53030;
   font-size: 16px;
   display: inline;
-}
-.TodoItem-checkbox {
-  width: 24px;
-  height: 11px;
-  margin-top: 15px;
 }
 .TodoItem-date {
   font-size: 12px;

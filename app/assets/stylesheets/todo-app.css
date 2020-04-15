@@ -1,113 +1,107 @@
 body {
   font-family: sans-serif;
-  max-width: 600px;
-  margin-top: 32px;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 460px;
+  margin: 0 auto;
+  margin-top: 60px;
 }
+
 .TodoPage-title {
-  font-size: 48px;
+  font-size: 20px;
+  color: #453c52;
+  letter-spacing: 0.14px;
   line-height: 1.6;
-  color: black;
-  font-weight: 600px;
+  font-weight: 600;
   margin-bottom: 12px;
 }
-.TodoSection-title {
-  font-size: 34px;
-  line-height: 1.4;
-  color: black;
-}
-.TodoSection-todo {
-  font-size: 20px;
-  line-height: 1.2;
-  margin-left: 34px;
-  color: black;
-}
+
 .AddTodo {
   display: flex;
   height: 32px;
   align-items: stretch;
   margin-bottom: 24px;
 }
+
+.TodoSection {
+  margin-bottom: 20px;
+}
+
 .AddTodo-text {
-  padding: 6px;
+  padding: 6px 12px;
   font-size: 14px;
-  color: black;
+  color: #453c52;
   margin-right: 10px;
   border-radius: 4px;
-  border: 1px solid gray;
+  border: 1px solid #bfb8cc;
 }
+
 .AddTodo-date {
   padding: 6px;
   font-size: 14px;
-  color: black;
+  color: #453c52;
   margin-right: 10px;
   border-radius: 4px;
-  border: 1px solid gray;
+  border: 1px solid #bfb8cc;
 }
+
 .AddTodo-button {
+  padding: 6px 24px;
   font-size: 14px;
   color: white;
-  background-color: green;
+  background-color: #48bb78;
   border-radius: 4px;
   border: 1px solid transparent;
-  padding: 6px 22px;
 }
+
 .TodoSectionTitle {
   display: flex;
-  color: black;
+  color: #453c52;
   align-items: center;
   margin-bottom: 8px;
 }
+
 .TodoSectionTitle-text {
-  font-size: 34px;
-  font-weight: 6px;
-  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 8px;
   line-height: 1.4;
-  color: black;
 }
-.TodoSectionTitle-remainingcount {
-  font-size: 20px;
+
+.TodoSectionTitle-remainingCount {
+  font-size: 12px;
 }
-.TodoSection {
-  margin-bottom: 50px;
-  margin-left: 34px;
-  color: black;
-}
+
 .TodoItem {
   font-size: 14px;
   margin-left: 8px;
   margin-bottom: 6px;
   color: #453c52;
 }
-.TodoItem-dueDate {
-  display: inline;
-  font-size: 12px;
-  color: blue;
-  margin-left: 10px;
+
+.TodoItem-text {
+  text-decoration-line: line-through;
 }
+
 .TodoItem-container {
-  font-size: 20px;
-  padding: 6px 12px;
+  display: flex;
+  padding: 2px 8px;
   align-items: center;
 }
+
 .TodoItem-container:hover {
   background-color: #f1edf7;
 }
 
 .TodoItem-checkbox {
-  width: 24px;
-  height: 11px;
-  margin-top: 15px;
+  width: 16px;
+  height: 16px;
 }
-.TodoItem-date {
-  font-size: 12px;
-  color: #726a7e;
-  letter-spacing: 0.09px;
+
+.TodoItem-dueDate {
+  font-size: 10px;
+  color: rgb(141, 133, 154);
   margin-left: 10px;
-  display: inline;
 }
+
 .TodoItem-delete {
   visibility: hidden;
   margin-left: 8px;
@@ -119,4 +113,12 @@ body {
 
 .TodoItem-delete > img {
   width: 16px;
+}
+
+.TodoItem-date {
+  font-size: 12px;
+  color: #726a7e;
+  letter-spacing: 0.09px;
+  margin-left: 10px;
+  display: inline;
 }
