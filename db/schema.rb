@@ -10,32 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_11_115043) do
+ActiveRecord::Schema.define(version: 2020_04_15_103338) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "articles", force: :cascade do |t|
-    t.string "article_name"
-    t.string "article_type"
-  end
-
-  create_table "products", force: :cascade do |t|
-    t.integer "product_id"
-    t.string "product_name"
-    t.float "cost"
-  end
-
-  create_table "student", id: false, force: :cascade do |t|
-    t.integer "regno"
-    t.string "name", limit: 20
-    t.float "cgpa"
-  end
-
-  create_table "students", force: :cascade do |t|
-    t.string "student_name"
-    t.string "student_branch"
-  end
 
   create_table "todos", force: :cascade do |t|
     t.text "todo_text"
@@ -47,8 +25,6 @@ ActiveRecord::Schema.define(version: 2020_03_11_115043) do
     t.string "name"
     t.string "email"
     t.string "password"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
