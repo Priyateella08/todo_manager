@@ -112,7 +112,7 @@ body {
 }
 
 .TodoItem-delete > img {
-  width: 16px;
+  width: 5px;
 }
 
 .TodoItem-date {
