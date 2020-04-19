@@ -1,25 +1,30 @@
 <section class="TodoSection">
   <div class="TodoSectionTitle">
-    <p class="TodoSectionTitle-text"><%= section_title%></p>
-    <p class="TodoSectionTitle-remainingcount"><%= todos.completed.count%>/<%= todos.count%></p>
+    <p class="TodoSectionTitle-text"> <%= section_title%> </p>
+    <p class="TodoSectionTitle-remainingcount"> <%= todos.completed.count%>/<%= todos.count%> </p>
   </div>
   <ul>
      <% todos.each do |todo| %>
       <li class="TodoItem">
         <label class="TodoItem-container">
-        <%= form_with(url: "/todos/#{todo.id}", method: "put") do%>
-         <%=check_box_tag("completed",nil,todo.completed,onclick: "this.form.submit()",class: "TodoItem-checkbox")%>
-        <% end%>
+          <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
+           <%=check_box_tag("completed",nil,
+                           todo.completed,onclick: "this.form.submit()",
+                           class: "TodoItem-checkbox")
+           %>
+          <% end %>
 
           <p class='<%= todo.completed ? "TodoItem-text" : "" %>'>
            <%= todo.todo_text %>
           </p>
           <% if show_due_date %>
-            <p class="TodoItem-dueDate"><%= todo.due_date.to_s (:short) %></p>
+            <p class="TodoItem-dueDate"> <%= todo.due_date.to_s (:short) %> </p>
           <% end %>
 
           <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>
-              <%= image_submit_tag("trash.svg",class: "TodoItem-delete")%>
+              <%= image_submit_tag("trash.svg",
+                                    class: "TodoItem-delete")
+              %>
           <% end %>
         </label>
       </li>

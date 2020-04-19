@@ -1,10 +1,18 @@
 
  <h1 class="TodoPage-title">My To-do List</h1>
     <article>
-     <%= form_with(url: "/todos", method: "post", class: "AddTodo") do%>
-        <%= text_field_tag("todo_text","",placeholder: "what's next?",class: "AddTodo-text")%>
-        <%= date_field_tag("due_date",nil,class: "AddTodo-date")%>
-        <%= button_tag("Add",type: "submit",class: "AddTodo-button")%>
+     <%= form_with(url: "/todos", method: "post", class: "AddTodo") do %>
+        <%= text_field_tag("todo_text","",
+                            placeholder: "what's next?",
+                            class: "AddTodo-text")
+        %>
+        <%= date_field_tag("due_date",nil,
+                            class: "AddTodo-date")
+        %>
+        <%= button_tag("Add",
+                        type: "submit",
+                        class: "AddTodo-button")
+        %>
      <% end %>
 
       <%= render partial: "todo-section" ,locals: {
