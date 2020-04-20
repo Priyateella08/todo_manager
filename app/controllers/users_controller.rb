@@ -1,39 +1,28 @@
 class UsersController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  #  skip_before_action :ensure_user_logged_in
 
   def index
-    render plain: User.all.map { |u| u.to_s }.join("\n")
+    render "users/new"
   end
 
-  def show
-    id = params[:id]
-    user = User.find(id)
-    render plain: user.to_s
+  def new
+    render "users/new"
   end
 
   def create
-    name = params[:name]
-    email = params[:email]
-    password = params[:password]
-    new_user = User.create!(
-      name: name,
-      email: email,
-      password: password,
+    new_user = User.new(
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      email: params[:email],
+      password: params[:password],
     )
-    response_text = "Hey your new user is created with the id #{new_user.id}"
-    render plain: response_text
-  end
-
-  def login
-    render plain: User.where("email = ? and password = ?", params[:email], params[:password]).exists?
-  end
-
-  def update
-    id = params[:id]
-    email = params[:email]
-    user = User.find(id)
-    user.email = email
-    user.save!
-    render plain: "Updated User email status to #{email}"
+    redirect_to "/"
+    # if new_user.save
+    #   redirect_to new_sessions_path
+    #   flash[:notice] = "Please Sign in to continue."
+    #  else
+    #   flash[:error] = new_user.errors.full_messages.join(", ")
+    #   redirect_to users_path
+    #  end
   end
 end
