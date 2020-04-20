@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Todo Manager</title>
+    <title>TodoManager</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,21 @@
   </head>
 
   <body>
+    <% if @current_user %>
+      <p class="UserHeader">
+        Welcome <%= @current_user.first_name %>!
+        <%= link_to "Sign Out", destroy_session_path, method: "delete" %>
+      </p>
+    <% end %>
+
+    <% if flash[:error] %>
+      <p class="Flash-error"> <%= flash[:error] %> </p>
+    <% end %>
+
+    <% if flash[:notice] %>
+      <p class="Flash-notice"> <%= flash[:notice] %> </p>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
