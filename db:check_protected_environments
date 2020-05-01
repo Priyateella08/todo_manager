@@ -1,0 +1,17 @@
+rails aborted!
+Don't know how to build task 'db:drop=' (See the list of available tasks with `rails --tasks`)
+Did you mean?  db:drop
+/app/vendor/bundle/ruby/2.6.0/gems/railties-6.0.2.1/lib/rails/commands/rake/rake_command.rb:23:in `block in perform'
+/app/vendor/bundle/ruby/2.6.0/gems/railties-6.0.2.1/lib/rails/commands/rake/rake_command.rb:20:in `perform'
+/app/vendor/bundle/ruby/2.6.0/gems/railties-6.0.2.1/lib/rails/command.rb:48:in `invoke'
+/app/vendor/bundle/ruby/2.6.0/gems/railties-6.0.2.1/lib/rails/commands.rb:18:in `<main>'
+/app/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/app/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/app/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/app/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/app/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/app/vendor/bundle/ruby/2.6.0/gems/activesupport-6.0.2.1/lib/active_support/dependencies.rb:325:in `block in require'
+/app/vendor/bundle/ruby/2.6.0/gems/activesupport-6.0.2.1/lib/active_support/dependencies.rb:291:in `load_dependency'
+/app/vendor/bundle/ruby/2.6.0/gems/activesupport-6.0.2.1/lib/active_support/dependencies.rb:325:in `require'
+/app/bin/rails:9:in `<main>'
+(See full trace by running task with --trace)
